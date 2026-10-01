@@ -29,7 +29,7 @@ CREATE TABLE `ospos_app_config` (
 
 INSERT INTO `ospos_app_config` (`key`, `value`) VALUES
 ('address', '123 Nowhere street'),
-('company', 'GIGA CHEMIST'),
+('company', 'Open Source Point of Sale'),
 ('default_tax_rate', '8'),
 ('email', 'admin@pappastech.com'),
 ('fax', ''),
@@ -78,8 +78,7 @@ CREATE TABLE `ospos_employees` (
 --
 
 INSERT INTO `ospos_employees` (`username`, `password`, `person_id`, `deleted`) VALUES
-('admin', 'e561b492beb55a4b59255657c7627e0e', 1, 0),
-('attendant', '8f74e6f4a86b9c9f283fc3cf36ecde24', 2, 0);
+('admin', '439a6de57d475c1a0ba9bcb1c39f0af6', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -273,15 +272,14 @@ CREATE TABLE `ospos_people` (
   `comments` text NOT NULL,
   `person_id` int(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`person_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `ospos_people`
 --
 
 INSERT INTO `ospos_people` (`first_name`, `last_name`, `phone_number`, `email`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`, `comments`, `person_id`) VALUES
-('Admin', 'User', '555-555-5555', 'admin@gigachemist.com', 'Address 1', '', '', '', '', '', '', 1),
-('POS', 'Attendant', '555-555-5556', 'attendant@gigachemist.com', 'Address 2', '', '', '', '', '', '', 2);
+('John', 'Doe', '555-555-5555', 'admin@pappastech.com', 'Address 1', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -310,9 +308,7 @@ INSERT INTO `ospos_permissions` (`module_id`, `person_id`) VALUES
 ('receivings', 1),
 ('reports', 1),
 ('sales', 1),
-('suppliers', 1),
-('customers', 2),
-('sales', 2);
+('suppliers', 1);
 
 -- --------------------------------------------------------
 

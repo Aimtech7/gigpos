@@ -1,11 +1,16 @@
-#edit_sale_wrapper
-{
+#edit_sale_wrapper {
 	margin: 0 auto;
-	padding-bottom: 50px;
-	width: 60%;
+	padding: 20px;
+	width: 70%;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-#edit_sale_wrapper h1
-{
+#edit_sale_wrapper h1 {
 	text-align: center;
+	color: #0f172a;
+	font-size: 20px;
+	margin-bottom: 16px;
 }

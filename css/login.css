@@ -1,84 +1,175 @@
-body
-{
-	text-align:center;
-}
-#container
-{
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:20px;
-	width:360px;
-
+* {
+	box-sizing: border-box;
 }
 
-#top
-{
-	position:relative;
-	width:100%;
-	height:20px;
-	padding:2px;
-	background-color:#005B7F;
-	text-align:center;
-	font-family:Verdana;
-	color:white;
-	font-size:12pt;
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #0f172a 0%, #0369a1 50%, #0f766e 100%);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #1e293b;
 }
 
-#login_form
-{
-	position:relative;
-	width:100%;
-	height:230px;
-	padding:2px;	
-	font-family:Verdana;
-	color:white;
-	font-size:10pt;
-	background-color:#A7A7A7;
+.login_brand_header {
+	text-align: center;
+	margin-bottom: 24px;
 }
 
-#welcome_message
-{
-	text-align:center;
-	margin-top:10px;
-	margin-bottom:20px;
+.login_logo_badge {
+	width: 64px;
+	height: 64px;
+	background: #ffffff;
+	border-radius: 16px;
+	margin: 0 auto 12px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-.error
-{
-	margin:0 auto;
-	border:3px solid #d3153b;
-	background-color:#fbe6f2;
-	padding:5px;
-	width:80%;
-	text-align:center;
-	font-size:18px;
-	margin-bottom:20px;
-	
+.login_logo_cross {
+	font-size: 36px;
+	font-weight: 900;
+	color: #059669;
+	line-height: 1;
 }
 
-.form_field_label
-{
-	float:left;
-	margin-left:20px;
-	width:30%;
+h1 {
+	margin: 0 0 6px 0;
+	font-size: 28px;
+	font-weight: 800;
+	color: #ffffff;
+	letter-spacing: 0.5px;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.form_field
-{
-	float:left;
-	width:30%;
+.login_subtitle {
+	margin: 0;
+	font-size: 14px;
+	color: #bae6fd;
+	font-weight: 500;
+	letter-spacing: 0.2px;
 }
 
-#submit_button
-{
-	position:absolute;
-	bottom:60px;
-	right:60px;
+#container {
+	position: relative;
+	width: 400px;
+	max-width: 92%;
+	margin: 0 auto;
+	background: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-input
-{
-	font-family:Arial;
+#top {
+	background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+	padding: 16px 24px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+	border-bottom: 1px solid #0284c7;
 }
 
+#login_form {
+	padding: 28px 28px 24px 28px;
+	background-color: #ffffff;
+}
+
+#welcome_message {
+	text-align: center;
+	margin-bottom: 22px;
+	font-size: 13px;
+	color: #64748b;
+	font-weight: 500;
+}
+
+.error,
+.error_message {
+	margin: 0 0 18px 0;
+	border: 1px solid #fecaca;
+	background-color: #fef2f2;
+	color: #991b1b;
+	padding: 10px 14px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.form_field_group {
+	margin-bottom: 18px;
+}
+
+.form_field_label {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #334155;
+	text-align: left;
+}
+
+.form_field {
+	width: 100%;
+}
+
+.form_field input {
+	width: 100%;
+	padding: 11px 14px;
+	font-size: 14px;
+	border: 1.5px solid #cbd5e1;
+	border-radius: 8px;
+	color: #0f172a;
+	background: #f8fafc;
+	transition: all 0.2s ease;
+	outline: none;
+}
+
+.form_field input:focus {
+	border-color: #0284c7;
+	background: #ffffff;
+	box-shadow: 0 0 0 3.5px rgba(2, 132, 199, 0.15);
+}
+
+#submit_button {
+	margin-top: 24px;
+}
+
+#submit_button input,
+input[type="submit"] {
+	width: 100%;
+	padding: 12px 20px;
+	background: linear-gradient(180deg, #059669 0%, #047857 100%);
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+	cursor: pointer;
+	box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.3);
+	transition: all 0.2s ease;
+}
+
+#submit_button input:hover,
+input[type="submit"]:hover {
+	background: linear-gradient(180deg, #047857 0%, #065f46 100%);
+	box-shadow: 0 6px 12px -2px rgba(5, 150, 105, 0.4);
+	transform: translateY(-1px);
+}
+
+.login_footer_note {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #94a3b8;
+}

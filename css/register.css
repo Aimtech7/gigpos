@@ -1,165 +1,369 @@
-#register_wrapper
-{
-	float:left;
-	width:70%;
-	font-family:Arial;
-	font-size:13px;
-}
-#mode_form
-{
-	position:relative;
-	background-color:#DDD;
-	padding: 8px 0px 8px 0px;
+#register_wrapper {
+	float: left;
+	width: 68%;
+	font-family: inherit;
+	font-size: 13px;
 }
 
-#show_suspended_sales_button
-{
-	position:absolute;
-	top:3px;
-	right:4px;	
+#mode_form {
+	position: relative;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px 8px 0 0;
+	padding: 10px 14px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
-#mode_form span
-{
-	font-weight:bold;
+#mode_form span {
+	font-weight: 700;
+	color: #334155;
+	font-size: 13px;
 }
 
-#add_item_form
-{
-	position:relative;
-	background-color:#BBBBBB;
-	width:100%;
-	padding: 8px 0px 8px 0px;
-	
+#mode_form select {
+	padding: 6px 12px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-weight: 600;
+	color: #0f172a;
+	background-color: #ffffff;
 }
 
-#new_item_button_register
-{
-	position:absolute;
-	top:3px;
-	right:4px;
+#show_suspended_sales_button {
+	position: absolute;
+	top: 8px;
+	right: 10px;
 }
 
-#add_item_form input
-{
- 	border: 1px solid #ccc;
- 	padding: 2px;
- 	
+#show_suspended_sales_button .small_button {
+	background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
+	border-color: #b45309;
+	min-width: 120px;
+	height: 30px;
 }
 
-#item_label,#customer_label
-{
-	font-weight:bold;
+#show_suspended_sales_button .small_button:hover {
+	background: linear-gradient(180deg, #b45309 0%, #92400e 100%);
 }
 
-#add_item_form label
-{
-	margin: 0px 5px 0px 5px;
+#add_item_form {
+	position: relative;
+	background: #ffffff;
+	width: 100%;
+	padding: 12px 14px;
+	border-left: 1px solid #e2e8f0;
+	border-right: 1px solid #e2e8f0;
+	border-bottom: 2px solid #0284c7;
+	display: flex;
+	align-items: center;
+	gap: 12px;
 }
 
-#register
-{
-	position:relative;
-	width:100%;
-	padding:0px;
-	border-collapse:collapse;	
+#item_label {
+	font-weight: 700;
+	color: #0369a1;
+	font-size: 13px;
+	white-space: nowrap;
 }
 
-#register th
-{	
-	background-color:#4386a1;
-	padding:5px;
-	text-align:center;
-	color:#FFFFFF;
+#add_item_form input#item {
+	flex: 1;
+	border: 2px solid #0284c7;
+	padding: 9px 14px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	background-color: #f0fdf4;
+	color: #0f172a;
+	transition: all 0.2s ease;
+	outline: none;
+	box-shadow: 0 1px 3px rgba(2, 132, 199, 0.1);
 }
 
-#register td
-{
-	background-color:#EEEEEE;
-	padding:3px;
-	text-align:center;
+#add_item_form input#item:focus {
+	background-color: #ffffff;
+	box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
 }
 
-#overall_sale
-{
-	float:left;
-	margin-left:4px;
-	background-color:#BBBBBB;
-	width:28%;
-	padding:5px;
-	font-family:Arial;
-	font-size:13px;
-	
+#new_item_button_register {
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }
 
-#sale_details
-{
-	position:relative;
-	width:100%;
-	margin-top:5px;
-	border-top:2px solid #000;
+#new_item_button_register .small_button {
+	background: linear-gradient(180deg, #059669 0%, #047857 100%);
+	border-color: #047857;
+	min-width: 85px;
+	height: 32px;
 }
 
-#finish_sale
-{
-	position:relative;
+#new_item_button_register .small_button:hover {
+	background: linear-gradient(180deg, #047857 0%, #065f46 100%);
 }
 
-#Payment_Types
-{
-	float:left;
-	width:100%;
-	margin-top:5px;
-	border-top:2px solid #000;
-	background-color:#DDD;
-	margin-bottom:0px;
-	clear:both;
+#register {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	border-collapse: collapse;
+	border: 1px solid #e2e8f0;
+	border-radius: 0 0 8px 8px;
+	overflow: hidden;
+	background: #ffffff;
+	margin-top: 0;
 }
 
-#Cancel_sale
-{
-	float:left;
-	width:100%;
-	margin-top:5px;
-	clear:both;
-}
-#suspended_sales_table th
-{
-	text-align:center;
-}
-
-#suspended_sales_table td
-{
-	padding: 7px;
+#register th {
+	background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+	padding: 10px 8px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 0.2px;
+	border: none;
 }
 
-#credit_card_form fieldset 
-{
-	overflow: auto;
-	border: 0;
-	margin: 0;
-	padding: 0; 
+#register td {
+	background-color: #ffffff;
+	padding: 8px 6px;
+	text-align: center;
+	border-bottom: 1px solid #f1f5f9;
+	font-size: 13px;
+	color: #334155;
+	vertical-align: middle;
 }
 
-#credit_card_form fieldset div 
-{
-	float: left; 
+#register tr:nth-child(even) td {
+	background-color: #f8fafc;
 }
 
-#credit_card_form fieldset.centered div 
-{
-	text-align: center; 
+#register tr:hover td {
+	background-color: #f0fdf4;
 }
 
-#credit_card_form label 
-{
+#register td input[type="text"] {
+	padding: 4px 6px;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #cbd5e1;
+}
+
+#register td input[type="submit"] {
+	padding: 4px 8px;
+	font-size: 11px;
+	background: #0284c7;
+	border-radius: 4px;
+}
+
+/* Right Panel: Overall Sale Summary & Payment */
+#overall_sale {
+	float: right;
+	width: 30%;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 10px;
+	padding: 16px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#select_customer_form {
+	margin-bottom: 8px;
+}
+
+#customer_label {
 	display: block;
-	margin-bottom: 5px; 
+	font-weight: 700;
+	color: #334155;
+	margin-bottom: 6px;
+	font-size: 12px;
 }
 
-#credit_card_form input.text 
-{
-	border: 1px solid #bfbab4;
-	margin: 0 4px 8px 0;
+#customer {
+	width: 100%;
+	border: 1px solid #cbd5e1;
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-size: 13px;
 }
 
+#customer:focus {
+	border-color: #0284c7;
+	box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+#sale_details {
+	position: relative;
+	width: 100%;
+	margin-top: 14px;
+	padding: 12px 14px;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+}
+
+#sale_details .float_left {
+	line-height: 2;
+	font-size: 13px;
+	color: #475569;
+}
+
+#sale_details .float_left:nth-child(even) {
+	text-align: right;
+	color: #0f172a;
+}
+
+#sale_details div:last-child {
+	font-size: 18px !important;
+	font-weight: 800 !important;
+	color: #059669 !important;
+}
+
+#sale_details div:nth-last-child(2) {
+	font-size: 15px !important;
+	font-weight: 700 !important;
+	color: #0f172a !important;
+}
+
+#Payment_Types {
+	float: none;
+	width: 100%;
+	margin-top: 14px;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 12px 14px;
+	clear: both;
+}
+
+#Payment_Types table td {
+	padding: 4px 0;
+	font-size: 12px;
+	font-weight: 600;
+	color: #334155;
+}
+
+#Payment_Types select {
+	width: 100%;
+	padding: 6px 10px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-weight: 600;
+	color: #0f172a;
+}
+
+#Payment_Types input#amount_tendered {
+	width: 100%;
+	padding: 6px 10px;
+	border: 1.5px solid #0284c7;
+	border-radius: 6px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #0f172a;
+	text-align: right;
+}
+
+#add_payment_button {
+	margin-top: 10px;
+	width: 100%;
+	height: 36px;
+	background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+}
+
+#add_payment_button:hover {
+	background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
+}
+
+#finish_sale {
+	position: relative;
+	margin-top: 14px;
+	padding: 12px 14px;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+}
+
+#finish_sale textarea {
+	width: 100%;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	padding: 6px 10px;
+	font-size: 12px;
+	margin-top: 4px;
+}
+
+#finish_sale_button {
+	background: linear-gradient(180deg, #059669 0%, #047857 100%) !important;
+	border-color: #047857 !important;
+	width: 100%;
+	height: 42px;
+	margin-top: 10px !important;
+	box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.3) !important;
+}
+
+#finish_sale_button:hover {
+	background: linear-gradient(180deg, #047857 0%, #065f46 100%) !important;
+	box-shadow: 0 6px 12px -2px rgba(5, 150, 105, 0.4) !important;
+	transform: translateY(-1px);
+}
+
+#finish_sale_button span {
+	font-size: 14px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.5px;
+}
+
+#suspend_sale_button {
+	background: linear-gradient(180deg, #d97706 0%, #b45309 100%) !important;
+	border-color: #b45309 !important;
+	width: 100%;
+	height: 34px;
+	margin-top: 8px !important;
+}
+
+#Cancel_sale {
+	float: none;
+	width: 100%;
+	margin-top: 10px;
+	clear: both;
+}
+
+#cancel_sale_button {
+	background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%) !important;
+	border-color: #dc2626 !important;
+	width: 100%;
+	height: 34px;
+	margin-top: 4px;
+}
+
+#cancel_sale_button:hover {
+	background: linear-gradient(180deg, #dc2626 0%, #b91c1c 100%) !important;
+}
+
+#payment_contents td {
+	background: #ffffff !important;
+	padding: 6px !important;
+	font-size: 12px;
+}
+
+#suspended_sales_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#suspended_sales_table th {
+	background: #0284c7;
+	color: #ffffff;
+	padding: 8px;
+	text-align: center;
+	font-size: 12px;
+}
+
+#suspended_sales_table td {
+	padding: 8px;
+	border-bottom: 1px solid #e2e8f0;
+}

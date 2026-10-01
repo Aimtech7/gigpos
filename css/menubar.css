@@ -1,93 +1,162 @@
-#menubar
-{
-	position:relative;
-	margin:0px;
-	padding:0px;
-	background-image: url("../images/menubar/menubar_bg.gif"); 
-	background-repeat: repeat-x;
-	width:100%;
-	height:100px;
-	color:#FFFFFF;
-	text-align:left;
-	text-align:center;
+#menubar {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #0f172a 0%, #0369a1 50%, #0f766e 100%);
+	width: 100%;
+	min-height: 100px;
+	color: #ffffff;
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+	border-bottom: 2px solid #0284c7;
 }
 
-#menubar_container
-{
-	position:relative;
-	margin:0 auto;
-	width:875px;
-	text-align:left;
+#menubar_container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1240px;
+	width: 96%;
+	padding: 10px 0 35px 0;
 }
 
-.menu_item
-{
-	float:left;
-	width:65px;
-	height:100%;
-	text-align:center;	
+#menubar_company_info {
+	float: left;
+	width: 220px;
+	padding: 6px 0 0 0;
 }
 
-
-#menubar a:link, #menubar a:visited, #menubar a
-{
-	color:#FFFFFF;
-	text-decoration:underline;
+#company_title {
+	font-size: 20px;
+	font-weight: 800;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	display: inline-block;
 }
 
-#menubar a:hover
-{
-	color:#CCCCCC;
-	text-decoration:underline;	
+#company_subtitle,
+#menubar_company_info span {
+	font-size: 11px;
+	color: #bae6fd;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	display: block;
+	margin-top: 2px;
 }
 
-.menu_item
-{
-	font-size:8pt;
+#menubar_navigation {
+	float: left;
+	width: calc(100% - 220px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 6px;
+	padding-top: 2px;
 }
 
-#menubar_company_info
-{
-	position:absolute;
-	left:0px;
-	top:18px;
-	width:250px;
-	height:55%;
+.menu_item {
+	float: left;
+	min-width: 68px;
+	padding: 6px 8px;
+	text-align: center;
+	border-radius: 8px;
+	transition: all 0.2s ease-in-out;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#company_title
-{
-	font-size:14pt;
-	font-weight:bold;
+.menu_item:hover {
+	background: rgba(255, 255, 255, 0.18);
+	border-color: rgba(255, 255, 255, 0.3);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#menubar_navigation
-{
-	position:relative;
-	width:75%;
-	left:200px;
-	top:8px;
-	height:45%;
+.menu_item img {
+	width: 28px;
+	height: 28px;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto 3px auto;
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 }
 
-#menubar_footer
-{
-	position:absolute;
-	top:80px;
-	left:0px;
-	height:17%;
-	padding-top:3px;
-	font-size:8pt;
-	font-weight:bold;
+.menu_item a {
+	color: #f8fafc !important;
+	text-decoration: none !important;
+	font-size: 11px;
+	font-weight: 600;
+	display: block;
+	letter-spacing: 0.1px;
 }
 
-#menubar_date
-{
-	position:absolute;
-	top:80px;
-	right:0px;
-	height:17%;
-	padding-top:3px;
-	font-size:8pt;
-	font-weight:bold;
+.menu_item a:hover {
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+#menubar_footer {
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	font-size: 12px;
+	font-weight: 500;
+	color: #e2e8f0;
+	background: rgba(15, 23, 42, 0.4);
+	padding: 4px 12px;
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#menubar_footer a {
+	color: #fca5a5 !important;
+	font-weight: 700;
+	text-decoration: none !important;
+	margin-left: 6px;
+	padding: 2px 8px;
+	background: rgba(220, 38, 38, 0.25);
+	border-radius: 12px;
+	transition: all 0.15s ease;
+}
+
+#menubar_footer a:hover {
+	background: #dc2626;
+	color: #ffffff !important;
+}
+
+#menubar_date {
+	position: absolute;
+	bottom: 8px;
+	right: 0;
+	font-size: 11px;
+	font-weight: 600;
+	color: #e0f2fe;
+	background: rgba(15, 23, 42, 0.4);
+	padding: 4px 12px;
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 992px) {
+	#menubar_company_info {
+		float: none;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	#menubar_navigation {
+		float: none;
+		width: 100%;
+		justify-content: center;
+	}
+	#menubar_footer {
+		position: static;
+		margin-top: 10px;
+		display: inline-block;
+	}
+	#menubar_date {
+		position: static;
+		margin-top: 10px;
+		float: right;
+	}
 }
